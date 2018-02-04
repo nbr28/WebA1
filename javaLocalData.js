@@ -1,8 +1,16 @@
 $(document).ready(function () {
     var html = '';
-    for (var i = 0; i < demoVariables.length; i++)
-        html += '<tr><td>' + demoVariables[i].id +
-            '</td><td>' +demoVariables[i].first_name + '</td></tr>';
+    for (var i = 0; i < demoVariables.length - 1; i++) {
+        var mDate = moment(demoVariables[i].birthdate);
+        html +=
+            '<tr><td class="hidden">' + demoVariables[i].id + '</td>' +
+            '<td>' + demoVariables[i].last_name + ', ' + demoVariables[i].first_name + '</td>' +
+            '<td class="text-right ">' + mDate.format('ddd, MMMM Do YYYY') + '</td>' +
+            '<td>City:' + demoVariables[i].city + '<br /> ' +
+            'Email: <a href="mailto:' + demoVariables[i].email + '">' + demoVariables[i].email + '</a><br /> ' +
+            '<a href="' + demoVariables[i].website + '">Website</a></td>' +
+            '<td class="text-right">' + demoVariables[i].credits + '</td></tr>';
+    }
     $('#MainTable tbody').append(html);
 
 });
