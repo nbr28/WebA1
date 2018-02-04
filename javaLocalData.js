@@ -1,12 +1,6 @@
 $(document).ready(function () 
 {
     console.log('Ready');
-    ko.applyBindings(myPersonModel, $("body")[0]);
-
-    window.setTimeout(function(){
-        myViewModel.personName("Bob");
-    },2000);
-        // Add your functionality here...
 
 });
 
