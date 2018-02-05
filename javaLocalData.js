@@ -1,19 +1,28 @@
 $(document).ready(function () {
     var html = '';
-    demoVariables= _.sortBy(demoVariables,'credits');
+    demoVariables = _.sortBy(demoVariables, 'credits');
     for (var i = 0; i < demoVariables.length - 1; i++) {
         var mDate = moment(demoVariables[i].birthdate);
         html +=
-            '<tr><td class="hidden">' + demoVariables[i].id + '</td>' +
+            '<tr class="tableRow"><td class="hidden varId">' + demoVariables[i].id + '</td>' +
             '<td>' + demoVariables[i].last_name + ', ' + demoVariables[i].first_name + '</td>' +
             '<td class="text-right ">' + mDate.format('ddd, MMMM Do YYYY') + '</td>' +
-            '<td>City:' + demoVariables[i].city + '<br /> ' +
+            '<td>City: ' + demoVariables[i].city + '<br /> ' +
             'Email: <a href="mailto:' + demoVariables[i].email + '">' + demoVariables[i].email + '</a><br /> ' +
             '<a href="' + demoVariables[i].website + '">Website</a></td>' +
             '<td class="text-right">' + demoVariables[i].credits + '</td></tr>';
     }
     $('#MainTable tbody').append(html);
 
+});
+
+$(document).on("click", ".tableRow", function () {
+    var id = $(this).find('td.hidden.varId').text();
+    let arr  = $.grep(demoVariables, function( demoVariables ) {
+        return demoVariables.id == id;});
+    $("#CustomerName").text(arr[0].last_name+", "+arr[0].first_name)
+    $("#birthDay").text(moment(arr[0].birthdate).format('ddd, MMMM Do YYYY'));
+    $("#city").text(arr[0].city);
 });
 
 var demoVariables = [{ "id": 1, "first_name": "Shena", "last_name": "Szimoni", "city": "Sinmak", "email": "sszimoni0@thetimes.co.uk", "website": "http://clickbank.net/donec/vitae/nisi/nam/ultrices.jpg", "birthdate": "1990-05-21T07:50:11Z", "credits": 5230 },

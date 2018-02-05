@@ -52,11 +52,12 @@
 
     <div class="container">
         <div class="row">
-            <div class="card">
-                <div class="card-header">
-                    Customer List:
-                </div>
-                <div class="col-lg-9">
+            <div class="col-lg-9">
+                <div class="card">
+                    <div class="card-header">
+                        Customer List:
+                    </div>
+
                     <table class="table table-hover table-bordered table-responsive-md" id="MainTable">
                         <thead>
                             <th class="hidden"></th>
@@ -65,22 +66,40 @@
                             <th>Address</th>
                             <th class="text-right ">Credits</th>
                         </thead>
-                        <tbody id="MainTableBody">
-                            <tr class="hidden">
+                        <tbody>
 
-                            </tr>
+                            <!-- Where Content will be added by jQuery -->
                         </tbody>
                     </table>
                 </div>
-                <div class="col-lg-3">
-                    <div class="">
-                        <h1 class="affix">Testing</h1>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card affix">
+                        <div class="card-header">
+                            Customer Details:
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <h3 class="card-title" id="CustomerName">Custoermer Name</h5>
+                                </li>
+                                <li class="list-group-item">
+                                    <h4>Birthdate:</h4>
+                                    <p id="birthDay"></p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h4>City:</h4>
+                                    <p id="city"></p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-
                 </div>
             </div>
+
         </div>
+    </div>
     </div>
 
     <!-- Footer -->
