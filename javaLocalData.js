@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var html = '';
+    demoVariables= _.sortBy(demoVariables,'credits');
     for (var i = 0; i < demoVariables.length - 1; i++) {
         var mDate = moment(demoVariables[i].birthdate);
         html +=
