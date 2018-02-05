@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var html = '';
+    //Use lodash to sort the list
     demoVariables = _.sortBy(demoVariables, 'credits');
     for (var i = 0; i < demoVariables.length - 1; i++) {
         var mDate = moment(demoVariables[i].birthdate);
@@ -18,11 +19,15 @@ $(document).ready(function () {
 
 $(document).on("click", ".tableRow", function () {
     var id = $(this).find('td.hidden.varId').text();
-    let arr  = $.grep(demoVariables, function( demoVariables ) {
-        return demoVariables.id == id;});
-    $("#CustomerName").text(arr[0].last_name+", "+arr[0].first_name)
-    $("#birthDay").text(moment(arr[0].birthdate).format('ddd, MMMM Do YYYY'));
-    $("#city").text(arr[0].city);
+    //TODO: change to search with lodash!!!!
+    let arr = _.find(demoVariables,function(o){
+        return o.id==id;
+    });
+    // let arr  = $.grep(demoVariables, function( demoVariables ) {
+    //     return demoVariables.id == id;});
+    $("#CustomerName").text(arr.last_name+", "+arr.first_name)
+    $("#birthDay").text(moment(arr.birthdate).format('ddd, MMMM Do YYYY'));
+    $("#city").text(arr.city);
 });
 
 var demoVariables = [{ "id": 1, "first_name": "Shena", "last_name": "Szimoni", "city": "Sinmak", "email": "sszimoni0@thetimes.co.uk", "website": "http://clickbank.net/donec/vitae/nisi/nam/ultrices.jpg", "birthdate": "1990-05-21T07:50:11Z", "credits": 5230 },

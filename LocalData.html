@@ -53,47 +53,57 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-                <div class="card">
-                    <div class="card-header">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
                         Customer List:
                     </div>
+                    <div class="panel-body">
+                        <table class="table table-hover table-responsive-md" id="MainTable">
+                            <thead>
+                                <th class="hidden"></th>
+                                <th>Name</th>
+                                <th class="text-right">Birth Date</th>
+                                <th>Address</th>
+                                <th class="text-right ">Credits</th>
+                            </thead>
+                            <tbody>
 
-                    <table class="table table-hover table-bordered table-responsive-md" id="MainTable">
-                        <thead>
-                            <th class="hidden"></th>
-                            <th>Name</th>
-                            <th class="text-right">Birth Date</th>
-                            <th>Address</th>
-                            <th class="text-right ">Credits</th>
-                        </thead>
-                        <tbody>
-
-                            <!-- Where Content will be added by jQuery -->
-                        </tbody>
-                    </table>
+                                <!-- Where Content will be added by jQuery -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+            <!-- TODO: Use panels not cards !-->
             <div class="col-lg-3">
-                <div class="card">
-                    <div class="card affix">
-                        <div class="card-header">
-                            Customer Details:
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <h3 class="card-title" id="CustomerName">Custoermer Name</h5>
-                                </li>
-                                <li class="list-group-item">
-                                    <h4>Birthdate:</h4>
-                                    <p id="birthDay"></p>
-                                </li>
-                                <li class="list-group-item">
-                                    <h4>City:</h4>
-                                    <p id="city"></p>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                        Customer Details:
+                    </div>
+                    <div class="panel-body">
+
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h3 class="card-title" id="CustomerName">Customer Name:</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>Birthdate:</h4>
+                                        <p id="birthDay"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>City:</h4>
+                                        <p id="city"></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
