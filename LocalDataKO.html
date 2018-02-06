@@ -12,7 +12,7 @@
         crossorigin="anonymous">
     <!-- Additional style rules -->
     <link rel="stylesheet" href="main.css">
-    <title>&#9758;Natan Ross's Amazing Website&#9756;</title>
+    <title>&#9758;Natan Ross's Amazing Local Data Page&#9756;</title>
 </head>
 
 <body>
@@ -47,27 +47,76 @@
         </div>
     </nav>
 
-    <!-- Jumbotron, not needed on most pages -->
-    <div class="jumbotron">
-        <div class="container">
-            <h1>BTI425 Assignment 1</h1>
-            <p>Natan Ross</p>
-            <p>Working with jQuery, liba
-                <br>Febuary 2018</p>
-            <p>
-                <a class="btn btn-primary btn-lg" href="https://sictweb.github.io/bti425" role="button" target="_blank">Link to external resource &raquo;</a>
-            </p>
+    <!-- Main content -->
+    <h1 class="container">Working with jQuery, Moment, and Lodash using local data</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Customer List:
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover table-responsive-md" id="MainTable">
+                            <thead>
+                                <th class="hidden"></th>
+                                <th>Name</th>
+                                <th class="text-right">Birth Date</th>
+                                <th>Address</th>
+                                <th class="text-right ">Credits</th>
+                            </thead>
+                            <tbody>
+
+                                <!-- Where Content will be added by jQuery -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- TODO: Use panels not cards !-->
+            <div class="col-lg-3">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                        Customer Details:
+                    </div>
+                    <div class="panel-body">
+
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h3 class="card-title" id="CustomerName">Customer Name:</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>Birthdate:</h4>
+                                        <p id="birthDay"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>City:</h4>
+                                        <p id="city"></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+    </div>
 
-    <!-- Main content -->
-
-    
-        <!-- Footer -->
-        <hr>
-        <footer>
-            <p>&copy; 2018  Natan Ross. This is my own work, and I have practiced academic honesty.</p>
-        </footer>
+    <!-- Footer -->
+    <hr>
+    <footer>
+        <p>&copy; 2018 Natan Ross. This is my own work, and I have practiced academic honesty.</p>
+    </footer>
     </div>
 
     <!-- Fetch the code for the libraries we need -->
@@ -79,7 +128,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <!-- My own code -->
-    <script src="main.js"></script>
+    <script src="jsLocalKO.js"></script>
 </body>
 
 </html>
