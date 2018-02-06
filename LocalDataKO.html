@@ -48,11 +48,11 @@
     </nav>
 
     <!-- Main content -->
-    <h1 class="container">Working with jQuery, Moment, and Lodash using local data</h1>
+    <h1 class="container">Working with Knockout using local data</h1>
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Customer List:
@@ -66,41 +66,25 @@
                                 <th>Address</th>
                                 <th class="text-right ">Credits</th>
                             </thead>
-                            <tbody>
+                            <tbody data-bind="foreach: demoVariables">
 
-                                <!-- Where Content will be added by jQuery -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!-- TODO: Use panels not cards !-->
-            <div class="col-lg-3">
-                <div class="panel panel-default">
 
-                    <div class="panel-heading">
-                        Customer Details:
-                    </div>
-                    <div class="panel-body">
+                                <tr class="tableRow">
+                                    <td class="hidden varId" data-bind="text: id"> </td>
+                                    <td data-bind="text: lastFirstName(last_name, first_name)"></td>
+                                    <td class="text-right" data-bind='text: moment(birthdate).format("ddd, MMMM Do YYYY")'></td>
+                                    <td>
+                                        City:
+                                        <span data-bind="text: city"></span>
+                                        <br />
+                                        <span>
+                                                Email:<a data-bind="text: email, {href : 'mailto:'+email }" ></a>
+                                        </span>
 
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <h3 class="card-title" id="CustomerName">Customer Name:</h5>
+                                        <br />
+                                        <a data-bind="attr: { href: website }">Website</a>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Birthdate:</h4>
-                                        <p id="birthDay"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>City:</h4>
-                                        <p id="city"></p>
-                                    </td>
+                                    <td class="text-right"  data-bind="text: credits"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -109,7 +93,7 @@
             </div>
 
         </div>
-    </div>
+
     </div>
 
     <!-- Footer -->
