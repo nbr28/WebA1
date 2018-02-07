@@ -34,13 +34,16 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Item one</a>
+                        <a href="LocalData.html">Local Data</a>
                     </li>
                     <li>
-                        <a href="#">Item two</a>
+                        <a href="LocalDataKO.html">Local Data With KO</a>
                     </li>
                     <li>
-                        <a href="#">Item three</a>
+                        <a href="FetchedData.html">Fetched Data</a>
+                    </li>
+                    <li>
+                        <a href="FetchedDataKO.html">Fetched Data KO</a>
                     </li>
                 </ul>
             </div>
@@ -78,13 +81,14 @@
                                         <span data-bind="text: city"></span>
                                         <br />
                                         <span>
-                                                Email:<a data-bind="text: email, attr: {href : 'mailto:'+email }" ></a>
+                                            Email:
+                                            <a data-bind="text: email, attr: {href : 'mailto:'+email }"></a>
                                         </span>
 
                                         <br />
                                         <a data-bind="attr: { href: website }">Website</a>
                                     </td>
-                                    <td class="text-right"  data-bind="text: credits"></td>
+                                    <td class="text-right" data-bind="text: credits"></td>
                                 </tr>
                             </tbody>
                         </table>

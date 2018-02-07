@@ -34,13 +34,16 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Item one</a>
+                        <a href="LocalData.html">Local Data</a>
                     </li>
                     <li>
-                        <a href="#">Item two</a>
+                        <a href="LocalDataKO.html">Local Data With KO</a>
                     </li>
                     <li>
-                        <a href="#">Item three</a>
+                        <a href="FetchedData.html">Fetched Data</a>
+                    </li>
+                    <li>
+                        <a href="FetchedDataKO.html">Fetched Data KO</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +61,7 @@
                             Project List:
                         </div>
                         <div class="panel-body">
-                            <table class="table" >
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th class="col-md-3">Name</th>
@@ -70,10 +73,16 @@
                                 <tbody data-bind="foreach: projects">
                                     <tr>
                                         <td class="hidden varId" data-bind="text: _id"> </td>
-                                        <td> <input  type="text" class="form-control" data-bind="value: ProjectName"></td>
+                                        <td>
+                                            <input type="text" class="form-control" data-bind="value: ProjectName">
+                                        </td>
                                         <td data-bind='text: moment(ProjectStartDate).format("ddd, MMMM Do YYYY")'></td>
-                                        <td> <textarea  rows="5" class="form-control" data-bind="value: ProjectDescription"></textarea></td>
-                                        <td> <button data-bind="click:$parent.save">Save</button> </td>
+                                        <td>
+                                            <textarea rows="5" class="form-control" data-bind="value: ProjectDescription"></textarea>
+                                        </td>
+                                        <td>
+                                            <button data-bind="click:$parent.save">Save</button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
