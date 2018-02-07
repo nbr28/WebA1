@@ -16,7 +16,7 @@ $(document).ready(function () {
                 '<td>' + data[i].LastName + ', ' + data[i].FirstName + '</td>' +
                 '<td class="text-right ">' + mDate.format('ddd, MMMM Do YYYY') + '</td>' +
                 '<td>'+data[i].AddressStreet+'</br>'+data[i].AddressCity+", "+data[i].AddressState+", "+data[i].AddressZip+'</td>' +
-                '<td class="text-right">' + data[i].SalaryBonus + '</td></tr>';
+                '<td class="text-right">$' + data[i].SalaryBonus + '</td></tr>';
         }
         $('#MainTable tbody').append(html);
 

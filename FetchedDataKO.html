@@ -47,27 +47,48 @@
         </div>
     </nav>
 
-    <!-- Jumbotron, not needed on most pages -->
-    <div class="jumbotron">
+
+    <!-- Main content -->
+    <div>
         <div class="container">
-            <h1>BTI425 Assignment 1</h1>
-            <p>Natan Ross</p>
-            <p>Working with jQuery, liba
-                <br>Febuary 2018</p>
-            <p>
-                <a class="btn btn-primary btn-lg" href="https://sictweb.github.io/bti425" role="button" target="_blank">Link to external resource &raquo;</a>
-            </p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Project List:
+                        </div>
+                        <div class="panel-body">
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th class="col-md-3">Name</th>
+                                        <th class="col-md-1">Start Date</th>
+                                        <th class="col-md-8">Description</th>
+                                        <th class="col-md-1"></th>
+                                    </tr>
+                                </thead>
+                                <tbody data-bind="foreach: projects">
+                                    <tr>
+                                        <td class="hidden varId" data-bind="text: _id"> </td>
+                                        <td> <input  type="text" class="form-control" data-bind="value: ProjectName"></td>
+                                        <td data-bind='text: moment(ProjectStartDate).format("ddd, MMMM Do YYYY")'></td>
+                                        <td> <textarea  rows="5" class="form-control" data-bind="value: ProjectDescription"></textarea></td>
+                                        <td> <button data-bind="click:$parent.save">Save</button> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Main content -->
-
-    
-        <!-- Footer -->
-        <hr>
-        <footer>
-            <p>&copy; 2018  Natan Ross. This is my own work, and I have practiced academic honesty.</p>
-        </footer>
+    <!-- Footer -->
+    <hr>
+    <footer>
+        <p>&copy; 2018 Natan Ross. This is my own work, and I have practiced academic honesty.</p>
+    </footer>
     </div>
 
     <!-- Fetch the code for the libraries we need -->
@@ -79,7 +100,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <!-- My own code -->
-    <script src="main.js"></script>
+    <script src="FetchedDataKO.js"></script>
 </body>
 
 </html>
