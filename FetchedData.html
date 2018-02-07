@@ -12,7 +12,7 @@
         crossorigin="anonymous">
     <!-- Additional style rules -->
     <link rel="stylesheet" href="main.css">
-    <title>&#9758;Natan Ross's Amazing Website&#9756;</title>
+    <title>&#9758;Natan Ross's Amazing Fetched Data&#9756;</title>
 </head>
 
 <body>
@@ -46,23 +46,70 @@
             </div>
         </div>
     </nav>
-
-    <!-- Jumbotron, not needed on most pages -->
-    <div class="jumbotron">
-        <div class="container">
-            <h1>BTI425 Assignment 1</h1>
-            <p>Natan Ross</p>
-            <p>Working with jQuery, liba
-                <br>Febuary 2018</p>
-            <p>
-                <a class="btn btn-primary btn-lg" href="https://sictweb.github.io/bti425" role="button" target="_blank">Link to external resource &raquo;</a>
-            </p>
-        </div>
-    </div>
-
     <!-- Main content -->
 
-    
+    <h1 class="container">Working with jQuery, Moment, and Lodash using data fetchd from Teams Api</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Employee List:
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover table-responsive-md" id="MainTable">
+                            <thead>
+                                <th class="hidden"></th>
+                                <th>Name</th>
+                                <th class="text-right">Hire Date</th>
+                                <th>Address</th>
+                                <th class="text-right ">Sallary Bonus</th>
+                            </thead>
+                            <tbody>
+
+                                <!-- Where Content will be added by jQuery -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- TODO: Use panels not cards !-->
+            <div class="col-lg-3">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                        Employee Details:
+                    </div>
+                    <div class="panel-body">
+
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h3 class="card-title" id="CustomerName">Employee Name:</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>HireDate:</h4>
+                                        <p id="hireDate"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>City:</h4>
+                                        <p id="city"></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
         <!-- Footer -->
         <hr>
         <footer>
@@ -79,7 +126,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <!-- My own code -->
-    <script src="main.js"></script>
+    <script src="fetchedData.js"></script>
 </body>
 
 </html>
